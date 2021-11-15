@@ -1,0 +1,41 @@
+{"people": [
+    {
+    "id": 1,
+    "name": "Molecule Man",
+    "info": "nice one"
+  },
+  {
+    "id": 2,
+    "name": "Madame Uppercut",
+    "info": "bad one"
+  },
+  {
+    "id": 3,
+    "name": "Madame Uppercut",
+    "info": "bad one"
+  },
+  {
+    "id": 4,
+    "name": "Madame Uppercut",
+    "info": "bad one"
+  },
+  {
+    "id": 5,
+    "name": "Madame Uppercut",
+    "info": "bad one"
+  },
+  {
+    "id": 6,
+    "name": "Madame Uppercut",
+    "info": "bad one"
+  },
+  {
+    "id": 7,
+    "name": "Madame Uppercut",
+    "info": "bad one"
+  },
+  {
+    "id": 8,
+    "name": "Madame Uppercut",
+    "info": "bad one"
+  }]}

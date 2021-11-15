@@ -1,0 +1,156 @@
+@import url("fonts/sf/stylesheet.css");
+body {
+    font-family: 'SF UI Display';
+    margin: 0;
+ }
+ a {
+   color: inherit; 
+   text-decoration: inherit;
+ }
+ .header {
+   background: #364968;
+   margin: 0px 0px;
+   display: flex;
+flex-direction: row;
+align-items: center;
+padding: 16px;
+
+ }
+ 
+ .header-title {
+   margin: 0px 0px;
+   font-weight: bold;
+font-size: 18px;
+color: white;
+ }
+ .desktop-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    visibility: hidden;
+    padding: 0px;
+    height: 0px;
+ }
+ 
+ .container {
+    margin: 0 auto;
+    align-items: center;
+    max-width: 800px;
+    
+ }
+ 
+ .people {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+    margin-top: 12px;
+ }
+ 
+ .person {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+ }
+ 
+ .person-image {
+   width: 56px;
+   height: 56px;
+   border-radius: 8px;
+   margin: 8px 12px 8px 16px;
+   object-fit: cover;
+ }
+ 
+ .person-name{
+    margin: 0;
+    font-style: normal;
+font-weight: 600;
+font-size: 14px;
+ }
+ .person-info{
+   font-size: 12px;
+   font-weight: 400;
+   color: #7A91B5;
+   
+ }
+ 
+
+ 
+ 
+ .button-delete{
+   width: 16px;
+   height: 16px;
+   background-size: 16px;
+    background-position: center center;
+    
+    background-repeat: no-repeat;
+    background-image: url('../img/Delete.png');
+    margin-right: 25px;
+    margin-left: auto;
+ }
+ .button-back{
+   width: 24px;
+   height: 24px;
+    background-position: center center;
+    
+    background-repeat: no-repeat;
+    background-image: url('../img/arrow.png');
+    margin-right: 37px;
+ }
+
+.button-logo{
+   width: 40px;
+   height: 40px;
+    background-position: center center;
+    
+    background-repeat: no-repeat;
+    background-image: url('../img/tensor-logo.png');
+    margin-left: 10px;
+    margin-right: 12px;
+    padding-bottom: 16px;
+}
+.desktop-title{
+   font-family: TensorFont;
+font-weight: bold;
+font-size: 24px;
+}
+ 
+ @media screen and (min-width: 1080px) {
+    
+
+    .people{
+      flex-flow: column wrap;
+      max-height: 800px;
+      
+    }
+    .person{
+       max-width: 392px;
+    }
+    .person-image {
+      width: 80px;
+      height: 80px;
+      margin: 16px 12px 16px 16px;
+      object-fit: cover;
+    }
+    .person-name {
+   font-size: 24px;
+   }
+   .person-info{
+      font-size: 14px;
+      
+    }
+    .button-delete{
+      visibility: hidden;
+    }
+    .header{
+       height: 0px;
+       visibility: hidden;
+       padding: 0;
+    }
+    .desktop-header{
+      visibility: visible;
+      background: white;
+      height: 185px;
+    }
+    
+ }
