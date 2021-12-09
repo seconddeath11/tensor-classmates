@@ -1,41 +1,164 @@
-{"people": [
+{
+  "classmates": [
     {
-    "id": 1,
-    "name": "Molecule Man",
-    "info": "nice one"
-  },
-  {
-    "id": 2,
-    "name": "Madame Uppercut",
-    "info": "bad one"
-  },
-  {
-    "id": 3,
-    "name": "Madame Uppercut",
-    "info": "bad one"
-  },
-  {
-    "id": 4,
-    "name": "Madame Uppercut",
-    "info": "bad one"
-  },
-  {
-    "id": 5,
-    "name": "Madame Uppercut",
-    "info": "bad one"
-  },
-  {
-    "id": 6,
-    "name": "Madame Uppercut",
-    "info": "bad one"
-  },
-  {
-    "id": 7,
-    "name": "Madame Uppercut",
-    "info": "bad one"
-  },
-  {
-    "id": 8,
-    "name": "Madame Uppercut",
-    "info": "bad one"
-  }]}
+      "id": 3,
+      "first-name": "Мария",
+      "last-name": "Иванова",
+      "middle-name": "Андреевна",
+      "study": "УГАТУ",
+      "course": 2,
+      "city": "Уфа",
+      "phone": "+7 999 345 34 33",
+      "mail": "ivanovama03@gmail.com",
+      "url": "https://klike.net/uploads/posts/2019-07/1564314090_3.jpg",
+      "vk": "https://vk.com/id1",
+      "telegram": "https://t.me/durov_russia",
+      "whatsapp": "https://web.whatsapp.com/",
+      "facebook": "https://ru-ru.facebook.com/zuck"
+    },
+    {
+      "id": 5,
+      "first-name": "Мария",
+      "last-name": "Иванова",
+      "middle-name": "Андреевна",
+      "study": "УГАТУ",
+      "course": 2,
+      "city": "Уфа",
+      "phone": "+7 999 345 34 33",
+      "mail": "ivanovama03@gmail.com",
+      "url": "https://klike.net/uploads/posts/2019-07/1564314090_3.jpg",
+      "vk": "https://vk.com/id1",
+      "telegram": "https://t.me/durov_russia",
+      "whatsapp": "https://web.whatsapp.com/",
+      "facebook": "https://ru-ru.facebook.com/zuck"
+    },
+    {
+      "id": 6,
+      "first-name": "Мария",
+      "last-name": "Иванова",
+      "middle-name": "Андреевна",
+      "study": "УГАТУ",
+      "course": 2,
+      "city": "Уфа",
+      "phone": "+7 999 345 34 33",
+      "mail": "ivanovama03@gmail.com",
+      "url": "https://klike.net/uploads/posts/2019-07/1564314090_3.jpg",
+      "vk": "https://vk.com/id1",
+      "telegram": "https://t.me/durov_russia",
+      "whatsapp": "https://web.whatsapp.com/",
+      "facebook": "https://ru-ru.facebook.com/zuck"
+    },
+    {
+      "id": 8,
+      "first-name": "Мария",
+      "last-name": "Иванова",
+      "middle-name": "Андреевна",
+      "study": "УГАТУ",
+      "course": 2,
+      "city": "Уфа",
+      "phone": "+7 999 345 34 33",
+      "mail": "ivanovama03@gmail.com",
+      "url": "https://klike.net/uploads/posts/2019-07/1564314090_3.jpg",
+      "vk": "https://vk.com/id1",
+      "telegram": "https://t.me/durov_russia",
+      "whatsapp": "https://web.whatsapp.com/",
+      "facebook": "https://ru-ru.facebook.com/zuck"
+    },
+    {
+      "first-name": "Мария",
+      "last-name": "Иванова",
+      "middle-name": "Андреевна",
+      "study": "УГАТУ",
+      "course": 2,
+      "city": "Уфа",
+      "phone": "+7 999 345 34 33",
+      "mail": "ivanovama03@gmail.com",
+      "url": "https://klike.net/uploads/posts/2019-07/1564314090_3.jpg",
+      "id": 9,
+      "vk": "https://vk.com/id1",
+      "telegram": "https://t.me/durov_russia",
+      "whatsapp": "https://web.whatsapp.com/",
+      "facebook": "https://ru-ru.facebook.com/zuck"
+    },
+    {
+      "id": 10,
+      "first-name": "Мария",
+      "last-name": "Иванова",
+      "middle-name": "Андреевна",
+      "study": "УГАТУ",
+      "course": 2,
+      "city": "Уфа",
+      "phone": "+7 999 345 34 33",
+      "mail": "ivanovama03@gmail.com",
+      "url": "https://klike.net/uploads/posts/2019-07/1564314090_3.jpg",
+      "vk": "https://vk.com/id1",
+      "telegram": "https://t.me/durov_russia",
+      "whatsapp": "https://web.whatsapp.com/",
+      "facebook": "https://ru-ru.facebook.com/zuck"
+    },
+    {
+      "id": 11,
+      "first-name": "Мария",
+      "last-name": "Иванова",
+      "middle-name": "Андреевна",
+      "study": "УГАТУ",
+      "course": 2,
+      "city": "Уфа",
+      "phone": "+7 999 345 34 33",
+      "mail": "ivanovama03@gmail.com",
+      "url": "https://klike.net/uploads/posts/2019-07/1564314090_3.jpg",
+      "vk": "https://vk.com/id1",
+      "telegram": "https://t.me/durov_russia",
+      "whatsapp": "https://web.whatsapp.com/",
+      "facebook": "https://ru-ru.facebook.com/zuck"
+    },
+    {
+      "id": 12,
+      "first-name": "Мария",
+      "last-name": "Иванова",
+      "middle-name": "Андреевна",
+      "study": "УГАТУ",
+      "course": 2,
+      "city": "Уфа",
+      "phone": "+7 999 345 34 33",
+      "mail": "ivanovama03@gmail.com",
+      "url": "https://klike.net/uploads/posts/2019-07/1564314090_3.jpg",
+      "vk": "https://vk.com/id1",
+      "telegram": "https://t.me/durov_russia",
+      "whatsapp": "https://web.whatsapp.com/",
+      "facebook": "https://ru-ru.facebook.com/zuck"
+    },
+    {
+      "id": 13,
+      "first-name": "Мария",
+      "last-name": "Иванова",
+      "middle-name": "Андреевна",
+      "study": "УГАТУ",
+      "course": 2,
+      "city": "Уфа",
+      "phone": "+7 999 345 34 33",
+      "mail": "ivanovama03@gmail.com",
+      "url": "https://klike.net/uploads/posts/2019-07/1564314090_3.jpg",
+      "vk": "https://vk.com/id1",
+      "telegram": "https://t.me/durov_russia",
+      "whatsapp": "https://web.whatsapp.com/",
+      "facebook": "https://ru-ru.facebook.com/zuck"
+    },
+    {
+      "id": 14,
+      "first-name": "Мария",
+      "last-name": "Иванова",
+      "middle-name": "Андреевна",
+      "study": "УГАТУ",
+      "course": 2,
+      "city": "Уфа",
+      "phone": "+7 999 345 34 33",
+      "mail": "ivanovama03@gmail.com",
+      "url": "https://klike.net/uploads/posts/2019-07/1564314090_3.jpg",
+      "vk": "https://vk.com/id1",
+      "telegram": "https://t.me/durov_russia",
+      "whatsapp": "https://web.whatsapp.com/",
+      "facebook": "https://ru-ru.facebook.com/zuck"
+    }
+  ]
+}

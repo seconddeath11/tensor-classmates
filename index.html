@@ -7,65 +7,175 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="./styles/normalize.css">
       <link rel="stylesheet" href="./styles/styles.css">
-      <link href="//db.onlinewebfonts.com/c/117f92fb8afd947d07f996aef1de7738?family=TensorFont" rel="stylesheet" type="text/css"/>
-      <script src="./js/script.js" defer></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      
    </head>
    <body>
-      <div class="container">
+      <div class="cont">
          <div class="header">
-            <a href="#" class="button button-back"></a>
+            <a class="button button-back"></a>
             <h1 class="header-title">Мои одноклассники</h1>
+            <a class="button button-add" id="button-add-mobile"></a>
          </div>
          <div class="desktop-header">
-            <a class="button button-logo"></a>
+            <img src="img/tensor.svg" class="logo"></img>
             <h1 class="desktop-title">TENSOR SCHOOL</h1>
+            <a class="button button-add" id="button-add-desktop"></a>
          </div>
+         
             <section class="people">
                <template class="person-template">
-                   <div class="person">
-                  <a href="#"><img src="./img/IMG_8941.JPG"  class="person-image"></a>
+                  <div class="person">
+                  <img src="" class="person-image">
                   <div class="person-about">
-                    <a href="#"><h3 class="person-name"></h3></a>
-                    <span class="person-info"></span>
+                    <h3 class="name">
+                      <span class="first-name"></span>
+                      <span class="last-name"></span></h3>
+                    <div class="person-info">
+                      <span class="study"></span>,
+                      <span class="course"></span>                 
+                      <span class="city"></span>
+                    </div>
                   </div>
-                  <a href="#" class="button button-delete"></a>
-                </div>
+                  <a class="button button-delete"></a>
+               </div>
                </template>
                
             </section>
          
       </div>
-      <div id="personPopup" class="overlay">
-         <div class="popup">
-            <h2>Введите информацию об однокласснике</h2>
-            <a class="popup-close" href="#">&times;</a>
-            <form class="person-form">
-               <div class="form-group">
-                  <label class="form-group__label" for="name">Имя: </label>
-                  <div class="form-group__container">
-                     <input name="name" class="form-group__input" type="text" minlength="2" required />
-                     <span class="form-group__input-error"></span>
+      <div class="modal fade" id="person-change" tabindex="-1" role="dialog" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+           <div class="modal-content">
+             <div class="modal-header">
+               <h5 class="modal-title">Введите информацию об однокласснике</h5>
+               <button type="button" class="close" aria-label="Close" data-dismiss="modal">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+             </div>
+            
+             <div class="modal-body">
+               <form class="form-horizontal person-form">
+                <div class="form-group">
+                  <label class="control-label" for="last-name">Фамилия</label>
+                  <input type="text" class="form-control"  name="last-name" required>
+                </div>
+                <div class="row">
+                  <div class="form-group col">
+                    <label class="control-label" for="first-name">Имя</label>
+                    <input type="text" class="form-control"  name="first-name" required>
                   </div>
-               </div>
-               <div class="form-group">
-                  <label class="form-group__label" for="about">Информация: </label>
-                  <div class="form-group__container">
-                     <input name="about" class="form-group__input" type="text" minlength="10" required />
-                     <span class="form-group__input-error"></span>
+                  <div class="form-group col">
+                    <label class="control-label" for="middle-name">Отчество</label>
+                    <input type="text" class="form-control"  name="middle-name" required>
                   </div>
-               </div>
-               <div class="form-group">
-                  <label class="form-group__label" for="url">URL фото: </label>
-                  <div class="form-group__container">
-                     <input name="url" class="form-group__input" type="url" required />
-                     <span class="form-group__input-error"></span>
+                </div>
+                  <div class="form-group">
+                    <label class="control-label" for="phone">Телефон</label>
+                    <input type="tel" class="form-control"  name="phone" required>
                   </div>
-               </div>
-               <div class="form-group">
-                  <button class="my-form__submit" type="submit">Отправить</button>
-               </div>
-            </form>
+                  <div class="form-group">
+                    <label class="control-label" for="mail">Почта</label>
+                    <input type="email" class="form-control"  name="mail" required>
+                  </div>
+                  <div class="row">
+                  <div class="form-group col">
+                    <label class="control-label" for="study">Место обучения</label>
+                    <input type="text" class="form-control" name="study" required>
+                  </div>
+                  <div class="form-group col">
+                    <label class="control-label" for="course">Курс</label>
+                    <input type="number" class="form-control"  name="course" required>
+                  </div>
+                </div>
+                  <div class="form-group">
+                    <label class="control-label" for="city">Город проживания</label>
+                    <input type="text" class="form-control" name="city" required>
+                  </div>
+                  <div class="form-group">
+                     <label class="control-label" for="url">URL фото</label>
+                     <input type="url" class="form-control" name="url" required>
+                   </div>
+                   <div class="form-group">
+                    <label class="control-label" for="vk">URL VK</label>
+                    <input type="url" class="form-control" name="vk" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="facebook">URL facebook</label>
+                    <input type="url" class="form-control" name="facebook" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="whatsapp">URL whatsapp</label>
+                    <input type="url" class="form-control" name="whatsapp" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="telegram">URL telegram</label>
+                    <input type="url" class="form-control" name="telegram" required>
+                  </div>
+
+                   <div class="form-group">
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                     <button type="sumbit" class="btn btn-primary">Сохранить</button>
+                   </div>
+                 
+                </form>
+             </div>
+             
+           </div>
          </div>
+       </div>
+       <div class="modal fade" id="person-popup" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+          <div class="modal-content">
+            
+            <div class="modal-body">
+              <div class="person-card">
+                <div class="person-full">
+                   <div class="name line">
+                     <span class="last-name"></span><br>
+                     <span class="first-name"></span>
+                    <span class="middle-name"></span>
+                    
+                  </div>
+                 
+                  <div class="line">
+                    <img src="img/place.svg">
+                   <span class="city"></span>
+                  </div>
+                  <div class="line">
+                    <img src="img/uni.svg">
+                    <span class="study"></span>,
+                    <span class="course"></span>
+                   </div>
+                   <div class="line">
+                     <img src="img/phone.svg">
+                     <span class="phone"></span>
+                   </div>
+                   <div>
+                     <img src="img/mail.svg">
+                     <span class="mail"></span>
+                   </div>
+                </div>
+                <a class="button button-edit"></a>
+                <div class="bar">
+                  <img src="" class="image">
+                  <div class="links">
+                    <a class="vk-link"><img src="img/vk.svg"></a>
+                    <a class="facebook-link"><img src="img/facebook.svg"></a>
+                    <a class="whatsapp-link"><img src="img/whatsapp.svg"></a>
+                    <a class="telegram-link"><img src="img/telegram.svg"></a>
+                  </div>
+                </div>
+                
+               </div>
+            </div>
+            
+          </div>
+        </div>
       </div>
-   </body>
+       <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       <script src="./js/script.js"></script>
+      </body>
 </html>

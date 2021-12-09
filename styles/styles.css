@@ -1,156 +1,265 @@
 @import url("fonts/sf/stylesheet.css");
+@font-face {font-family:TensorFont; src:url("fonts/TensorFont.ttf");}
 body {
-    font-family: 'SF UI Display';
-    margin: 0;
- }
- a {
-   color: inherit; 
-   text-decoration: inherit;
- }
- .header {
-   background: #364968;
-   margin: 0px 0px;
-   display: flex;
-flex-direction: row;
-align-items: center;
-padding: 16px;
+  font-family: "SF UI Display" !important;
+  margin: 0;
+}
 
- }
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.button{
+  cursor: pointer;
+}
+.header {
+  background: #364968;
+  margin: 0px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+}
+
+.header-title {
+  margin: 0px 0px;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+.desktop-header {
+  font-family: TensorFont !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  visibility: hidden;
+  padding: 0px;
+  height: 0px;
+}
+
+.cont {
+  
+  align-items: center;
+  
+}
+
+.people {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.person {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.person-image {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  margin: 8px 12px 8px 16px;
+  object-fit: cover;
+}
+
+.person .name {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.person-info {
+  font-size: 12px;
+  font-weight: 400;
+  color: #7a91b5;
+}
+.person-info .city{
+  display: none;
+}
+.person-card{
+  display: flex;
+  flex-direction: row;
+  
+}
+#person-popup{
  
- .header-title {
-   margin: 0px 0px;
-   font-weight: bold;
+border-radius: 8px;
+top: 10rem;
+}
+.modal {
+  overflow: auto
+}
+.person-full{
+  display: flex;
+  flex-direction: column;
+  color: #7A91B5;
+  font-size: 12px;
+  line-height: 14px;
+}
+.modal-md{
+  max-width: 360px !important;
+}
+.modal-content{
+  border: none !important;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+.person-full .name{
+  margin-bottom: 13px;
+  color: black;
+  max-width: 190px;
+  font-weight: bold;
 font-size: 18px;
-color: white;
- }
- .desktop-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    visibility: hidden;
-    padding: 0px;
-    height: 0px;
- }
- 
- .container {
-    margin: 0 auto;
-    align-items: center;
-    max-width: 800px;
-    
- }
- 
- .people {
-   display: flex;
-   flex-direction: column;
-   flex-wrap: wrap;
-    margin-top: 12px;
- }
- 
- .person {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
- }
- 
- .person-image {
-   width: 56px;
-   height: 56px;
-   border-radius: 8px;
-   margin: 8px 12px 8px 16px;
-   object-fit: cover;
- }
- 
- .person-name{
-    margin: 0;
-    font-style: normal;
-font-weight: 600;
-font-size: 14px;
- }
- .person-info{
-   font-size: 12px;
-   font-weight: 400;
-   color: #7A91B5;
-   
- }
- 
+line-height: 21px;
 
- 
- 
- .button-delete{
-   width: 16px;
-   height: 16px;
-   background-size: 16px;
-    background-position: center center;
-    
-    background-repeat: no-repeat;
-    background-image: url('../img/Delete.png');
-    margin-right: 25px;
-    margin-left: auto;
- }
- .button-back{
-   width: 24px;
-   height: 24px;
-    background-position: center center;
-    
-    background-repeat: no-repeat;
-    background-image: url('../img/arrow.png');
-    margin-right: 37px;
- }
+}
+.person-full .last-name{
+  text-transform: uppercase;
+}
+.person-full img{
+  margin-right: 8px;
+}
+.person-card .image{
+  width: 104px;
+  height: 104px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.line{
+  margin-bottom: 6px;
+}
+.links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.button-delete {
+  width: 16px;
+  height: 16px;
+  background-size: 16px;
+  background-position: center center;
 
-.button-logo{
-   width: 40px;
-   height: 40px;
-    background-position: center center;
-    
-    background-repeat: no-repeat;
-    background-image: url('../img/tensor-logo.png');
+  background-repeat: no-repeat;
+  background-image: url("../img/Delete.svg");
+  margin-right: 25px;
+  
+  margin-left: auto;
+}
+.button-back {
+  width: 24px;
+  height: 24px;
+  background-position: center center;
+
+  background-repeat: no-repeat;
+  background-image: url("../img/arrow.svg");
+  
+  margin-right: 37px;
+}
+
+.logo {
+  width: 40px;
     margin-left: 10px;
-    margin-right: 12px;
-    padding-bottom: 16px;
+  margin-right: 12px;
+  padding-bottom: 16px;
 }
-.desktop-title{
-   font-family: TensorFont;
-font-weight: bold;
-font-size: 24px;
+.desktop-title {
+  font-family: TensorFont;
+  font-weight: bold;
+  font-size: 24px;
 }
- 
- @media screen and (min-width: 1080px) {
-    
+.button-edit{
+  width: 14px;
+  height: 14px;
+  background-position: center center;
 
-    .people{
-      flex-flow: column wrap;
-      max-height: 800px;
-      
-    }
-    .person{
-       max-width: 392px;
-    }
-    .person-image {
-      width: 80px;
-      height: 80px;
-      margin: 16px 12px 16px 16px;
-      object-fit: cover;
-    }
-    .person-name {
-   font-size: 24px;
-   }
-   .person-info{
-      font-size: 14px;
-      
-    }
-    .button-delete{
-      visibility: hidden;
-    }
-    .header{
-       height: 0px;
-       visibility: hidden;
-       padding: 0;
-    }
-    .desktop-header{
-      visibility: visible;
-      background: white;
-      height: 185px;
-    }
-    
- }
+  background-repeat: no-repeat;
+  background-image: url("../img/edit.svg");
+  background-size: contain;
+  margin: 25px 40px 0px 7px;
+}
+.button-add{
+  width: 18px;
+  height: 18px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#button-add-mobile{
+  margin-left: auto;
+  background-image: url("../img/plus.svg");
+  display: inline;
+  margin-right: 9px;
+}
+#button-add-desktop{
+  display: none;
+}
+
+@media screen and (min-width: 1080px) {
+  .people {
+    flex-flow: column wrap;
+    max-height: 800px;
+  }
+  .person {
+    max-width: 392px;
+  }
+  .person-image {
+    width: 80px;
+    height: 80px;
+    margin: 16px 12px 16px 16px;
+    object-fit: cover;
+  }
+  .person .name {
+    font-size: 24px;
+  }
+  .info {
+    font-size: 14px;
+  }
+  .button-delete {
+    visibility: hidden;
+  }
+  .course{
+    margin-right: 14px;
+  }
+  #button-add-mobile{
+    display: none;
+  }
+  .person:hover{
+    background: #EEF8FE;
+  border-radius: 8px;
+  }
+  .person:hover > .button-delete{
+    visibility: visible;
+  }
+  .person-info .city{
+    display: inline;
+  }
+  .header {
+    height: 0px;
+    visibility: hidden;
+    padding: 0;
+  }
+  .desktop-header {
+    visibility: visible;
+    background: white;
+    height: 185px;
+  }
+  
+.cont {
+  margin: 0 auto;
+  align-items: center;
+  max-width: 800px;
+}
+#button-add-desktop{
+  background-image: url("../img/plus-black.svg");
+  margin-left: auto;
+  display: block;
+  margin-right: 33px;
+  margin-bottom: 15px;
+  align-self: end;
+}
+}
