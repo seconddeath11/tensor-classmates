@@ -82,7 +82,7 @@ if($('#button-add-mobile').css('display') == 'none')
    createPersonButton = document.querySelector('#button-add-desktop');
 }
 
-const personApi = new Api('http://localhost:3000/classmates', { 'Content-Type': 'application/json' });
+const personApi = new Api('http://localhost:5000', { 'Content-Type': 'application/json' });
 const personForm = new Form(document.querySelector('.person-form'));
 
 function showPopup(popup){  
