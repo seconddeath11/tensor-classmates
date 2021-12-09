@@ -76,13 +76,11 @@ class Form {
 
 const peopleSection = document.querySelector('.people');
 const personTemplate = document.querySelector('.person-template').content;
-var createPersonButton = document.querySelector('#button-add-mobile');
-if($('#button-add-mobile').css('display') == 'none')
-{
-   createPersonButton = document.querySelector('#button-add-desktop');
-}
+const createPersonButton = document.querySelector('#button-add-desktop');
+const createPersonButton2 = document.querySelector('#button-add-mobile');
 
-const personApi = new Api('http://localhost:3000/classmates', { 'Content-Type': 'application/json' });
+
+const personApi = new Api('http://localhost:5000', { 'Content-Type': 'application/json' });
 const personForm = new Form(document.querySelector('.person-form'));
 
 function showPopup(popup){  
@@ -205,11 +203,7 @@ const renderItem = (item) => {
    });
 
 }
-
-
-personApi.getItems().then((data) => renderList(data));
-
-createPersonButton.addEventListener('click', () => {
+function create() {
    showPopup($('#person-change'));
    personForm.init((event) => {
       event.preventDefault();
@@ -234,4 +228,9 @@ createPersonButton.addEventListener('click', () => {
          hidePopup($('#person-change'));
       });
    });
-});
+}
+
+personApi.getItems().then((data) => {renderList(data)});
+
+createPersonButton.addEventListener('click', create);
+createPersonButton2.addEventListener('click', create);
