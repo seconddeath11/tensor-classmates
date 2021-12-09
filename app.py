@@ -26,7 +26,8 @@ def query_db(req, method):
         if method != "GET":
             con.commit()
         else:
-            df = pd.DataFrame.from_records(cur.fetchall(), columns=[i[0] for i in cur.description]).to_dict(orient="records")
+            df = pd.DataFrame.from_records(cur.fetchall(), columns=[i[0] for i in cur.description]).to_dict(
+                orient="records")
             return df
 
 
@@ -38,19 +39,40 @@ def close_connection(exception):
 
 
 @app.route("/", methods=["POST", "GET"])
-def index():
+def get_post():
     if request.method == "POST":
         body = json.loads(request.data)
         try:
             thing = "INSERT INTO classmates ('first-name','last-name','middle-name','study','course','city', 'phone','mail', 'url', 'vk', 'telegram', 'whatsapp', 'facebook') VALUES (\"%s\",\"%s\",\"%s\",\"%s\",%d,\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\")" % (
-                body["first-name"], body["last-name"], body["middle-name"], body["study"], body["course"],
+                body["first-name"], body["last-name"], body["middle-name"], body["study"], int(body["course"]),
                 body["city"], body["phone"], body["mail"],
                 body["url"], body["vk"], body["telegram"], body["whatsapp"], body["facebook"])
-            query_db(thing, "PUT")
+            query_db(thing, request.method)
 
         except Exception as e:
             print(e)
 
+    return jsonify(query_db("SELECT * from classmates", "GET"))
+
+
+@app.route("/<int:id>", methods=["PUT", "DELETE"])
+def put_delete(id):
+    if request.method == "PUT":
+        body = json.loads(request.data)
+        try:
+            thing = "UPDATE classmates SET 'first-name'=\"%s\",'last-name'=\"%s\",'middle-name'=\"%s\",'study'=\"%s\",'course'=%d,'city'=\"%s\", 'phone'=\"%s\",'mail'=\"%s\", 'url'=\"%s\", 'vk'=\"%s\", 'telegram'=\"%s\", 'whatsapp'=\"%s\", 'facebook'=\"%s\" WHERE id=%d" % (
+                body["first-name"], body["last-name"], body["middle-name"], body["study"], int(body["course"]),
+                body["city"], body["phone"], body["mail"],
+                body["url"], body["vk"], body["telegram"], body["whatsapp"], body["facebook"], id)
+            print(thing)
+            query_db(thing, request.method)
+        except Exception as e:
+            print(e)
+    else:
+        try:
+            query_db("DELETE FROM classmates WHERE id=%d" % id, request.method)
+        except Exception as e:
+            print(e)
     return jsonify(query_db("SELECT * from classmates", "GET"))
 
 
