@@ -1,9 +1,10 @@
 import json
 import sqlite3
-from flask import g, request, jsonify, Response
-from flask import Flask
-from flask_cors import CORS, cross_origin
+
 import pandas as pd
+from flask import Flask
+from flask import g, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -14,7 +15,7 @@ DATABASE = 'db/class.db'
 def init_db():
     with app.app_context():
         with sqlite3.connect(DATABASE) as db:
-            with app.open_resource('schema.sql', mode='r') as f:
+            with app.open_resource('db/schema.sql', mode='r') as f:
                 db.cursor().executescript(f.read())
             db.commit()
 
