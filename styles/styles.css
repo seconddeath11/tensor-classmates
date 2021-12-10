@@ -166,11 +166,13 @@ line-height: 21px;
     margin-left: 10px;
   margin-right: 12px;
   padding-bottom: 16px;
+  display: none;
 }
 .desktop-title {
   font-family: TensorFont;
   font-weight: bold;
   font-size: 24px;
+  display: none;
 }
 .button-edit{
   width: 14px;
@@ -188,15 +190,10 @@ line-height: 21px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
-}
-#button-add-mobile{
   margin-left: auto;
   background-image: url("../img/plus.svg");
   display: inline;
   margin-right: 9px;
-}
-#button-add-desktop{
-  display: none;
 }
 
 @media screen and (min-width: 1080px) {
@@ -219,14 +216,14 @@ line-height: 21px;
   .info {
     font-size: 14px;
   }
+  .desktop-title, .logo{
+    display: block;
+  }
   .button-delete {
     visibility: hidden;
   }
   .course{
     margin-right: 14px;
-  }
-  #button-add-mobile{
-    display: none;
   }
   .person:hover{
     background: #EEF8FE;
@@ -239,11 +236,6 @@ line-height: 21px;
     display: inline;
   }
   .header {
-    height: 0px;
-    visibility: hidden;
-    padding: 0;
-  }
-  .desktop-header {
     visibility: visible;
     background: white;
     height: 185px;
@@ -254,12 +246,15 @@ line-height: 21px;
   align-items: center;
   max-width: 800px;
 }
-#button-add-desktop{
+.button-add{
   background-image: url("../img/plus-black.svg");
   margin-left: auto;
   display: block;
   margin-right: 33px;
   margin-bottom: 15px;
   align-self: end;
+}
+.header-title, .button-back{
+  display: none;
 }
 }

@@ -76,8 +76,7 @@ class Form {
 
 const peopleSection = document.querySelector('.people');
 const personTemplate = document.querySelector('.person-template').content;
-const createPersonButton = document.querySelector('#button-add-desktop');
-const createPersonButton2 = document.querySelector('#button-add-mobile');
+const createPersonButton = document.querySelector('.button-add');
 
 
 const personApi = new Api('http://localhost:5000', { 'Content-Type': 'application/json' });
@@ -233,4 +232,4 @@ function create() {
 personApi.getItems().then((data) => {renderList(data)});
 
 createPersonButton.addEventListener('click', create);
-createPersonButton2.addEventListener('click', create);
+

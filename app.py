@@ -65,7 +65,6 @@ def put_delete(id):
                 body["first-name"], body["last-name"], body["middle-name"], body["study"], int(body["course"]),
                 body["city"], body["phone"], body["mail"],
                 body["url"], body["vk"], body["telegram"], body["whatsapp"], body["facebook"], id)
-            print(thing)
             query_db(thing, request.method)
         except Exception as e:
             print(e)
